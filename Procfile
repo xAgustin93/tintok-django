@@ -1,1 +1,1 @@
-web: gunicorn tintok.wsgi --log-file -
+web: gunicorn tintok.wsgi
