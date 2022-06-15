@@ -18,8 +18,8 @@ from django.conf.urls.static import static
 
 from django.contrib import admin
 from django.urls import path, include
-from drf_yasg.views import get_schema_view
-from drf_yasg import openapi
+# from drf_yasg.views import get_schema_view
+# from drf_yasg import openapi
 
 from video.api.router import router_video
 from comment.api.router import router_comment
@@ -27,18 +27,18 @@ from users.api.router import router_user
 from follow.api.router import router_follow
 from notification.api.router import router_notification
 
-schema_view = get_schema_view(
-    openapi.Info(
-        title="TinTok - API",
-        default_version='v1',
-        description="Api DOC de TinTok",
-        terms_of_service="https://www.tincode.es/",
-        contact=openapi.Contact(email="xagustin93@gmail.com"),
-        license=openapi.License(name="BSD License"),
-    ),
-    public=True,
-    #    permission_classes=[permissions.AllowAny],
-)
+# schema_view = get_schema_view(
+#     openapi.Info(
+#         title="TinTok - API",
+#         default_version='v1',
+#         description="Api DOC de TinTok",
+#         terms_of_service="https://www.tincode.es/",
+#         contact=openapi.Contact(email="xagustin93@gmail.com"),
+#         license=openapi.License(name="BSD License"),
+#     ),
+#     public=True,
+#     #    permission_classes=[permissions.AllowAny],
+# )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
